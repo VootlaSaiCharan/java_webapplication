@@ -40,14 +40,14 @@ pipeline {
         stage('Build Image'){
             steps{
                 script{
-                    docker build -t myapp .
+                    sh 'docker build -t myapp .'
                 }
             }
         }
         stage('Running Container'){
             steps{
                 script{
-                    docker run --rm -itd --name cont_myapp -p 80:8080 myapp
+                    sh 'docker run --rm -itd --name cont_myapp -p 80:8080 myapp'
                 }
             }
         }
