@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+    // agent any
+    agent { label 'ec2-slave' }
     stages {
         stage('Cleanning up Docker and Images'){
             steps{
