@@ -35,7 +35,8 @@ pipeline {
         // }
         stage('clone'){
             steps{
-                git 'https://github.com/VootlaSaiCharan/test_java_app.git'
+                // git 'https://github.com/VootlaSaiCharan/test_java_app.git'
+                git branch: 'feature', url: 'https://github.com/VootlaSaiCharan/test_java_app.git'
             }
         }
         stage('Build Image'){
